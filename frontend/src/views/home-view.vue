@@ -15,7 +15,6 @@ export default {
   },
   async created() {
     await this.userStore.loadUser();
-    console.log(this.userStore.currUser);
   },
 };
 </script>

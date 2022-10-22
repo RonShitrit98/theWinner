@@ -22,7 +22,6 @@ async function signup(req, res) {
     // logger.debug(`auth.route - new account created: ` + JSON.stringify(account))
     const user = await authService.login(username, password);
     req.session.user = user;
-    console.log(req.session);
     res.json(user);
   } catch (err) {
     // logger.error('Failed to signup ' + err)
@@ -32,10 +31,6 @@ async function signup(req, res) {
 
 async function logout(req, res) {
   try {
-    console.log("logging out");
-    // console.log(req.session);
-    // req.session = null;
-    // req.session.user = null;
     await req.session.destroy();
     res.json({ msg: "Logged out successfully" });
   } catch (err) {
@@ -44,9 +39,7 @@ async function logout(req, res) {
 }
 
 async function loadUser(req, res) {
-  console.log("loading user");
   try {
-    console.log("load user", req.session);
     res.json(req.session.user);
   } catch {}
 }

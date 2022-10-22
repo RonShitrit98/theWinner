@@ -1,14 +1,12 @@
 <template>
- <section>
+  <section>
     <h1>Winner:</h1>
     <div class="winner-img-box">
-        <img src="" alt="">
+      <img src="" alt="" />
     </div>
- </section>
+  </section>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>

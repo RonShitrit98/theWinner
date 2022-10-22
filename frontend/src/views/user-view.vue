@@ -1,6 +1,8 @@
 <template>
-  <h1>{{ userStore.currUser.name }}</h1>
-  <button @click="logout">Logout</button>
+  <section v-if="userStore.currUser">
+    <h1>{{ userStore.currUser.name }}</h1>
+    <button @click="logout">Logout</button>
+  </section>
 </template>
 
 <script>
@@ -13,7 +15,7 @@ export default {
   methods: {
     async logout() {
       await this.userStore.logout();
-      this.$router.push('/')
+      this.$router.push("/");
     },
   },
 };
