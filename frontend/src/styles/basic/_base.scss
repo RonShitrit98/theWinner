@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: imbpSans;
+  background-color: $mainBcg;
+  letter-spacing: rem(0.3px);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-weight: normal;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+.main-app{
+  border-radius: 5px;
+}
